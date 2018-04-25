@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Courtney Baker
+ISLT-7375, Mobile Web App Development
+Final Project
+May 3, 2018
+-->
+  <head>
+    <title>Colors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/annyeong.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"
+  integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="audio.js"></script>
+	<link rel="stylesheet" type="text/css" href="annyeong.css">
+	<meta charset='utf-8'>
+  </head>
+  
+  <body>
+  <!--***********************************Specific Requirement B Page Title 10 Colors***************************************-->
+    <div data-role="page" id="colors" data-title="Colors">
+	  <!--***********************************Specific Requirement I Panel Widget 3********************************-->
+	  <div data-role="panel" id="leftpanel">
+		  <ul data-role="listview" data-inset="true">
+		    <!--**********************************Specific Requirement D Transitions added for Menu Pages****************************-->
+		    <li><a href="greetings.html" data-transition="slide">Basic Greetings & Phrases</a></li>
+			<li><a href="numbers.html" data-transition="slide">Numbers</a></li>
+			<li><a href="colors.html" id="activelink">Colors</a></li>
+			<li><a href="family.html" data-transition="slide">Family</a></li>
+			<li><a href="food.html" data-transition="slide">Food & Restaurants</a></li>
+		  </ul>
+		  <p>
+		    <a data-role="button" data-rel="close">Close</a>
+		  </p>
+	  </div>
+		
+	  <!--*************************Specific Requirement E Header**********************-->
+	  <div data-role="header">
+	    <!--*********************Specific Requirement D Transition #56**********************-->
+	    <!--*************************Specific Requirement E & J Previous button with icon*********************************-->
+	    <a href="numbers.html" data-icon="carat-l" data-iconpos="notext" data-transition="flip" data-direction="reverse"></a>
+		<!--*********************Specific Requirement D Transition #57**********************-->
+		<!--*************************Specific Requirement E & J Next button with icon****************************-->
+		<a href="family.html" data-icon="carat-r" data-transition="flip" data-iconpos="notext"></a>
+		<h1>Colors</h1>
+	  </div>
+	  
+	  <div role="main" class="ui-content">
+	    <p>This module will focus on basic colors.</p>
+		
+		<a href="#leftpanel" data-role="button" data-icon="bars">Menu</a>
+		
+		<ul id="colorsvocab" data-role="listview" data-inset="true">
+		        <li><input type="button" class="ui-header button" value="Black" onclick="play29('black')">
+		          <audio id="black" src="audio/black.wav"></audio><div id="vocab">Keom-eun-saek<br  /><br  />검은색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="White" onclick="play30('white')">
+		          <audio id="white" src="audio/white.wav"></audio><div id="vocab">Ha-yan-saek<br  /><br  />하얀색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Gray" onclick="play31('gray')">
+		          <audio id="gray" src="audio/gray.wav"></audio><div id="vocab">Hoe-saek<br  /><br  />회색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Red" onclick="play32('red')">
+		          <audio id="red" src="audio/red.wav"></audio><div id="vocab">Ppal-gan-saek<br  /><br  />빨간색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Blue" onclick="play33('blue')">
+		          <audio id="blue" src="audio/blue.wav"></audio><div id="vocab">Pa-ran-saek<br  /><br  />파란색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Green" onclick="play34('green')">
+		          <audio id="green" src="audio/green.wav"></audio><div id="vocab">Cho-rok-saek<br  /><br  />초록색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Yellow" onclick="play35('yellow')">
+		          <audio id="yellow" src="audio/yellow.wav"></audio><div id="vocab">No-ran-saek<br  /><br  />노란색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Orange" onclick="play36('orange')">
+		          <audio id="orange" src="audio/orange.wav"></audio><div id="vocab">Ju-hwang-saek<br  /><br  />주황색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Brown" onclick="play37('brown')">
+		          <audio id="brown" src="audio/brown.wav"></audio><div id="vocab">Kal-saek<br  /><br  />갈색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Pink" onclick="play38('pink')">
+		          <audio id="pink" src="audio/pink.wav"></audio><div id="vocab">Bun-hong-saek<br  /><br  />분홍색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Purple" onclick="play39('purple')">
+		          <audio id="purple" src="audio/purple.wav"></audio><div id="vocab">Bo-ra-saek<br  /><br  />보라색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Gold" onclick="play40('gold')">
+		          <audio id="gold" src="audio/gold.wav"></audio><div id="vocab">Keum-saek<br  /><br  />금색</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Silver" onclick="play41('silver')">
+		          <audio id="silver" src="audio/silver.wav"></audio><div id="vocab">Eun-saek<br  /><br  />은색</div></li>
+			  </ul>
+
+	  </div>
+	  
+	  <!--*******************************Specific Requirement E & F Footer Navigation Bar************************************-->
+	  <div data-role="footer" data-id="footernav" data-theme="a">
+	    <div data-role="navbar">
+		  <ul>
+		    <!--*********************Specific Requirement D Transition #58**********************-->
+		    <li> <a href="index.html" data-transition="pop">Home</a></li>
+			<!--*********************Specific Requirement D Transition #59**********************-->
+			<li> <a href="about.html" data-transition="pop">About</a></li>
+			<!--*********************Specific Requirement D Transition #60**********************-->
+			<li> <a href="modules.html" data-transition="pop">Modules</a></li>
+			<!--*********************Specific Requirement D Transition #61**********************-->
+			<li> <a href="feedback.html" data-transition="pop">Feedback</a></li>
+			<!--*********************Specific Requirement D Transition #62**********************-->
+			<li> <a href="contact.html" data-transition="pop">Contact</a></li>
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>

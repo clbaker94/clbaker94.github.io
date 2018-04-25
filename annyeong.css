@@ -1,0 +1,26 @@
+/* 
+Courtney Baker
+ISLT-7375, Mobile Web App Development
+Final Project
+May 3, 2018 */
+
+#vocab {
+	text-align: center;
+	
+}
+
+#activelink {
+	background-color: #ee252c;
+}
+
+#divider {
+	text-align: center;
+	
+}
+
+#homepageimage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}

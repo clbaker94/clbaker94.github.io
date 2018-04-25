@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Courtney Baker
+ISLT-7375, Mobile Web App Development
+Final Project
+May 3, 2018
+-->
+  <head>
+    <title>Feedback Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/annyeong.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"
+  integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  
+  <body>
+    <!--***************************Specific Requirement B Page Title 4 Feedback Form***************************-->
+    <div data-role="page" id="feedback" data-title="Feedback Form">
+	  <!--*************************Specific Requirement E Header**********************-->
+	  <div data-role="header">
+	    <!--*********************Specific Requirement D Transition #18**********************-->
+	    <!--*************************Specific Requirement E & J Home button/icon*********************************-->
+	    <a href="index.html" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse"></a>
+	    <h1>Feedback Form</h1>
+	  </div>
+	  
+	  <div role="main" class="ui-content">
+	    <p>Please fill out this form to give us feedback on your experience with our Korean language modules.</p>
+		
+		<!--********************************Feedback Form*******************************-->
+		<form action="feedbacksubmission.html" method="post" data-transition="slidefade">
+		<fieldset data-role="controlgroup">
+		  <!--**********************************Specific requirement H Field Type 1 Checkbox Field*************************-->
+		  <legend>How did you hear about Annyeong? <i>Please click all that apply.</i></legend>
+		  <input type="checkbox" name="hear" id="hear" value="From a friend">
+		  <label for="hear">From a friend</label>
+		  <input type="checkbox" name="hear" id="hear2" value="Social Media (i.e. Facebook, Twitter, etc.)">
+		  <label for="hear2">Social Media (i.e. Facebook, Twitter, etc.)</label>
+		  <input type="checkbox" name="hear" id="hear3" value="Advertisement">
+		  <label for="hear3">Advertisement</label>
+		  <input type="checkbox" name="hear" id="hear4" value="Email">
+		  <label for="hear4">Email</label>
+		  <input type="checkbox" name="hear" id="hear5" value="Search Engine">
+		  <label for="hear5">Search Engine</label>
+		  <input type="checkbox" name="hear" id="hear6" value="Other">
+		  <label for="hear6">Other</label>
+		</fieldset>
+		
+		<!--*********************************Specific requirement H Field Type 2 Radio Button Field**********************************-->
+		<fieldset data-role="controlgroup">
+		  <legend>Did you find our language modules to be helpful?</legend>
+		  <input type="radio" name="helpful" id="helpful" value="Yes">
+		  <label for="helpful">Yes</label>
+		  <input type="radio" name="helpful" id="helpful2" value="No">
+		  <label for="helpful2">No</label>
+		</fieldset>
+		
+		<!--*************************************Specific requirement H Field Type 3 Slider Field***************************************-->
+		<div class="ui-field-contain">
+		  <label for="rate">Please rate our language modules on a scale of 1-5, with 1 being not at all helpful and 5 being extremely helpful.</label>
+		  <input type="range" name="rate" id="rate" min="1" max="5" value="" data-highlight="true">
+		</div>
+		
+		<!--**************************************Specific requirement H Field Type 4 Text Area Field**************************************-->
+		<div class="ui-field-contain">
+		  <label for="explain">Please explain your answer to the previous question.</label>
+		  <textarea name="explain" id="explain"></textarea>
+		</div>
+		
+		<!--*************************************Specific requirement H Text Area Field************************************************-->
+		<div class="ui-field-contain">
+		  <label for="added">What topics would you like to see added to the tutorial?</label>
+		  <textarea name="added" id="added"></textarea>
+		</div>
+		
+		<div class="ui-field-contain">
+		  <input type="submit" name="submit" value="Submit"  />
+		</div>
+		
+		
+		</form>
+		
+	  </div>
+		
+		<!--*******************************Specific Requirement E & F Footer Navigation Bar************************************-->
+	    <div data-role="footer" data-id="footernav" data-theme="a">
+	      <div data-role="navbar">
+		    <ul>
+			  <!--*********************Specific Requirement D Transition #19**********************-->
+		      <li> <a href="index.html" data-transition="pop">Home</a></li>
+			  <!--*********************Specific Requirement D Transition #20**********************-->
+			  <li> <a href="about.html" data-transition="pop">About</a></li>
+			  <!--*********************Specific Requirement D Transition #21**********************-->
+			  <li> <a href="modules.html" data-transition="pop">Modules</a></li>
+			  <!--*********************Specific Requirement D Transition #22**********************-->
+			  <!--*********************************Active Page***********************************-->
+			  <li> <a href="feedback.html" class="ui-btn-active">Feedback</a></li>
+			  <!--*********************Specific Requirement D Transition #23**********************-->
+			  <li> <a href="contact.html" data-transition="pop">Contact</a></li>
+		  </div>
+		</div>
+	</div>
+  </body>
+</html>

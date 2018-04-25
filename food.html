@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Courtney Baker
+ISLT-7375, Mobile Web App Development
+Final Project
+May 3, 2018
+-->
+  <head>
+    <title>Food & Restaurants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/annyeong.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"
+  integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="audio.js"></script>
+	<link rel="stylesheet" type="text/css" href="annyeong.css">
+	<meta charset='utf-8'>
+  </head>
+  
+  <body>
+  <!--**********************************Specific Requirement B Page Title 12 Food & Restaurants*************************-->
+    <div data-role="page" id="food" data-title="Food & Restaurants">
+	  <!--***********************************Specific Requirement I Panel Widget 5********************************-->
+	  <div data-role="panel" id="leftpanel">
+		  <ul data-role="listview" data-inset="true">
+		    <!--**********************************Specific Requirement D Transitions added for Menu Pages****************************-->
+		    <li><a href="greetings.html" data-transition="slide">Basic Greetings & Phrases</a></li>
+			<li><a href="numbers.html" data-transition="slide">Numbers</a></li>
+			<li><a href="colors.html" data-transition="slide">Colors</a></li>
+			<li><a href="family.html" data-transition="slide">Family</a></li>
+			<li><a href="food.html" id="activelink">Food & Restaurants</a></li>
+	      </ul>
+		  <p>
+		    <a data-role="button" data-rel="close">Close</a>
+		  </p>
+	  </div>
+	  
+	  <!--*************************Specific Requirement E Header**********************-->
+	  <div data-role="header">
+	    <!--*********************Specific Requirement D Transition #70**********************-->
+	    <!--*************************Specific Requirement E & J Previous button with icon*********************************-->
+	    <a href="family.html" data-icon="carat-l" data-iconpos="notext" data-transition="flip" data-direction="reverse"></a>
+		<!--*********************Specific Requirement D Transition #71**********************-->
+		<!--*************************Specific Requirement E & J button/icon for feedback page****************************-->
+		<!--*************************Specific Requirement C Second Pre-fetch Attribute***********************-->
+		<a href="feedback.html" data-icon="comment" data-transition="pop" data-prefetch="true">Feedback</a>
+		<h1>Food & Restaurants</h1>
+	  </div>
+	  
+	  <div role="main" class="ui-content">
+	    <p>This module will focus on the names of food and drink items and phrases used when ordering at restaurants.</p>
+		
+		<a href="#leftpanel" data-role="button" data-icon="bars">Menu</a>
+		<!--************************************Specific Requirement I Tab Widget 2**************************************-->
+	    <div data-role="tabs">
+		  <div data-role="navbar">
+		    <ul>
+		      <li><a href="#tab3">Food & Drink Items</a></li>
+			  <li><a href="#tab4">Restaurant Phrases</a></li>
+		    </ul>
+		  </div>
+		  
+		  <div id="tab3">
+			  <ul id="foodvocab" data-role="listview" data-inset="true">
+		        <li><input type="button" class="ui-header button" value="Food" onclick="play56('yum')">
+		          <audio id="yum" src="audio/food.wav"></audio><div id="vocab">Eum-sik<br  /><br  />음식</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Meat" onclick="play57('meat')">
+		          <audio id="meat" src="audio/meat.wav"></audio><div id="vocab">Go-gi<br  /><br  />고기</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Chicken" onclick="play58('chicken')">
+		          <audio id="chicken" src="audio/chicken.wav"></audio><div id="vocab">Dak-go-gi<br  /><br  />닭고기</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Beef" onclick="play59('beef')">
+		          <audio id="beef" src="audio/beef.wav"></audio><div id="vocab">So-go-gi<br  /><br  />소고기</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Pork" onclick="play60('pork')">
+		          <audio id="pork" src="audio/pork.wav"></audio><div id="vocab">Dwae-ji-go-gi<br  /><br  />돼지고기</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Seafood" onclick="play61('seafood')">
+		          <audio id="seafood" src="audio/seafood.wav"></audio><div id="vocab">Hae-san-mul<br  /><br  />해산물</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Bread" onclick="play62('bread')">
+		          <audio id="bread" src="audio/bread.wav"></audio><div id="vocab">Ppang<br  /><br  />빵</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Fruit" onclick="play63('fruit')">
+		          <audio id="fruit" src="audio/fruit.wav"></audio><div id="vocab">Gwa-il<br  /><br  />과일</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Vegetables" onclick="play64('veggie')">
+		          <audio id="veggie" src="audio/veggie.wav"></audio><div id="vocab">Ya-chae<br  /><br  />야채</div></li>
+				
+				<li><input type="button" class="ui-header button" value="Beverage" onclick="play65('beverage')">
+		          <audio id="beverage" src="audio/beverage.wav"></audio><div id="vocab">Eum-ryo-su<br  /><br  />음료수</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Milk" onclick="play66('milk')">
+		          <audio id="milk" src="audio/milk.wav"></audio><div id="vocab">U-yu<br  /><br  />우유</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Juice" onclick="play67('juice')">
+		          <audio id="juice" src="audio/juice.wav"></audio><div id="vocab">Ju-seu<br  /><br  />주스</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Water" onclick="play68('water')">
+		          <audio id="water" src="audio/water.wav"></audio><div id="vocab">Mul<br  /><br  />물</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Cola" onclick="play69('cola')">
+		          <audio id="cola" src="audio/cola.wav"></audio><div id="vocab">Kol-la<br  /><br  />콜라</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Beer" onclick="play70('beer')">
+		          <audio id="beer" src="audio/beer.wav"></audio><div id="vocab">Maek-ju<br  /><br  />맥주</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Coffee" onclick="play71('coffee')">
+		          <audio id="coffee" src="audio/coffee.wav"></audio><div id="vocab">Keo-pi<br  /><br  />커피</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Tea" onclick="play72('tea')">
+		          <audio id="tea" src="audio/tea.wav"></audio><div id="vocab">Cha<br  /><br  />차</div></li>
+			  </ul>
+		  </div>
+			  
+	      <div id="tab4">
+		    <ul id="restaurantvocab" data-role="listview" data-inset="true">
+		        <li><input type="button" class="ui-header button" value="Restaurant" onclick="play73('restaurant')">
+		          <audio id="restaurant" src="audio/restaurant.wav"></audio><div id="vocab">Sik-dang<br  /><br  />식당</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Please give me the menu" onclick="play74('menu')">
+		          <audio id="menu" src="audio/menu.wav"></audio><div id="vocab">Menu Ju-se-yo<br  /><br  />메뉴 주세요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="I am ready to order" onclick="play75('order')">
+		          <audio id="order" src="audio/order.wav"></audio><div id="vocab">Ju-mun-hal-ge-yo<br  /><br  />주문 할게요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Delicious" onclick="play76('delicious')">
+		          <audio id="delicious" src="audio/delicious.wav"></audio><div id="vocab">Ma-shi-seo-yeo<br  /><br  />맛있어요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Not delicious" onclick="play77('notdelicious')">
+		          <audio id="notdelicious" src="audio/notdelicious.wav"></audio><div id="vocab">Ma-deop-seo-yo<br  /><br  />맛없어요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Spicy" onclick="play78('spicy')">
+		          <audio id="spicy" src="audio/spicy.wav"></audio><div id="vocab">Mae-wuh-yo<br  /><br  />매워요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Sweet" onclick="play79('sweet')">
+		          <audio id="sweet" src="audio/sweet.wav"></audio><div id="vocab">Dal-ah-yo<br  /><br  />달아요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Could you please give me some water?" onclick="play80('waterplease')">
+		          <audio id="waterplease" src="audio/waterplease.wav"></audio><div id="vocab"><br  />Mul Jom Ju-se-yo<br  />물 좀 주세요</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Please give me the bill" onclick="play81('bill')">
+		          <audio id="bill" src="audio/bill.wav"></audio><div id="vocab">Gye-san-seo Ju-se-yo<br  /><br  />계산서 주세요</div></li>
+	            
+				<li><input type="button" class="ui-header button" value="Korean food" onclick="play82('koreanfood')">
+		          <audio id="koreanfood" src="audio/koreanfood.wav"></audio><div id="vocab">Han-sik<br  /><br  />한식</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Western food" onclick="play83('westernfood')">
+		          <audio id="westernfood" src="audio/westernfood.wav"></audio><div id="vocab">Yang-sik<br  /><br  />양식</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Chinese food" onclick="play84('chinesefood')">
+		          <audio id="chinesefood" src="audio/chinesefood.wav"></audio><div id="vocab"><br  />Joong-sik<br  />중식</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Japanese food" onclick="play85('japanesefood')">
+		          <audio id="japanesefood" src="audio/japanesefood.wav"></audio><div id="vocab">il-sik<br  /><br  />일식</div></li>
+		    </ul>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <!--*******************************Specific Requirement E & F Footer Navigation Bar************************************-->
+	  <div data-role="footer" data-id="footernav" data-theme="a">
+	    <div data-role="navbar">
+		  <ul>
+		    <!--*********************Specific Requirement D Transition #72**********************-->
+		    <li> <a href="index.html" data-transition="pop">Home</a></li>
+			<!--*********************Specific Requirement D Transition #73**********************-->
+			<li> <a href="about.html" data-transition="pop">About</a></li>
+			<!--*********************Specific Requirement D Transition #74**********************-->
+			<li> <a href="modules.html" data-transition="pop">Modules</a></li>
+			<!--*********************Specific Requirement D Transition #75**********************-->
+			<li> <a href="feedback.html" data-transition="pop">Feedback</a></li>
+			<!--*********************Specific Requirement D Transition #76**********************-->
+			<li> <a href="contact.html" data-transition="pop">Contact</a></li>
+		</div>
+	  </div>
+	</div>
+	  
+  </body>
+</html>

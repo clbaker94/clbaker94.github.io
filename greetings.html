@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Courtney Baker
+ISLT-7375, Mobile Web App Development
+Final Project
+May 3, 2018
+-->
+  <head>
+    <title>Basic Greetings & Phrases</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/annyeong.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"
+  integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="audio.js"></script>
+	<link rel="stylesheet" type="text/css" href="annyeong.css">
+	<meta charset='utf-8'>
+  </head>
+  
+  <body>
+  <!--************************************Specific Requirement B Page Title 8 Basic Greetings & Phrases***************************-->
+    <div data-role="page" id="greetings" data-title="Basic Greetings & Phrases">
+	  <!--********************************Specific Requirement I Panel Widget 1*************************************************-->
+	  <div data-role="panel" id="leftpanel">
+		  <ul data-role="listview" data-inset="true">
+		    <!--**********************************Specific Requirement D Transitions added for Menu Pages****************************-->
+		    <li><a href="greetings.html" id="activelink">Basic Greetings & Phrases</a></li>
+			<li><a href="numbers.html" data-transition="slide">Numbers</a></li>
+			<li><a href="colors.html" data-transition="slide">Colors</a></li>
+			<li><a href="family.html" data-transition="slide">Family</a></li>
+			<li><a href="food.html" data-transition="slide">Food & Restaurants</a></li>
+		  </ul>
+		  <p>
+		    <a data-role="button" data-rel="close">Close</a>
+		  </p>
+	  </div>
+	   
+      	<!--*************************Specific Requirement E Header**********************-->   
+	  <div data-role="header">
+	    <!--*********************Specific Requirement D Transition #42**********************-->
+	    <!--*************************Specific Requirement E & J Home button/icon*********************************-->
+	    <a href="index.html" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse"></a>
+		<!--*********************Specific Requirement D Transition #43**********************-->
+		<!--*************************Specific Requirement E & J Next button with icon****************************-->
+		<a href="numbers.html" data-icon="carat-r" data-transition="flip" data-iconpos="notext"></a>
+		<h1>Greetings & Basic Phrases</h1>
+	  </div>
+	  
+	  <div role="main" class="ui-content">
+	    <p>This module will focus on greetings and introductory phrases.</p>
+		
+		<a href="#leftpanel" data-role="button" data-icon="bars">Menu</a>
+		
+		<ul id="greetingsvocab" data-role="listview" data-inset="true">
+		  <li><input type="button" class="ui-header button" value="Hello" onclick="play21('annyeong')">
+		    <audio id="annyeong" src="audio/annyeong.wav"></audio><div id="vocab">Ann-yeong-ha-se-yo<br  /><br  />안녕하세요</div></li>
+		  
+		  <li><input type="button" class="ui-header button" value="Nice to meet you" onclick="play22('meet')">
+		    <audio id="meet" src="audio/meet.wav"></audio><div id="vocab">Cheo-eum Boep-gess-seum-ni-da<br  /><br  />처음 뵙겠습니다</div></li>
+			
+		  <li> <input type="button" class="ui-header button" value="Goodbye (1)"  onclick="play23('bye1')">
+            <audio id="bye1" src="audio/bye1.wav"></audio><div id="vocab">Ann-yeong-hi-gye-se-yo<br  /><br  />안녕히계세요 <br>
+			<!--*********************************Specific Requirement I Popup 1******************************************-->
+			<p><a href="#goodbye" id="audiocenter" data-rel="popup" data-transition="pop" 
+             class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			 </div>
+             <div data-role="popup" id="goodbye" class="ui-content" data-theme="a" style="max-width:350px;">
+               <p>Use this phrase to say goodbye when you are the one who is leaving.
+			   <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			   </p>
+			 </div>
+		  </li>
+		  
+		  <li> <input type="button" class="ui-header button" value="Goodbye (2)"  onclick="play24('bye2')">
+            <audio id="bye2" src="audio/bye2.wav"></audio><div id="vocab">Ann-yeong-hi-ga-se-yo<br  /><br  />안녕히가세요 <br>
+			<!--***************************************Specific Requirement I Popup 2*****************************************-->
+			<p><a href="#goodbye2" id="audiocenter" data-rel="popup" data-transition="pop" 
+             class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			 </div>
+             <div data-role="popup" id="goodbye2" class="ui-content" data-theme="a" style="max-width:350px;">
+               <p>Use this phrase to say goodbye when you are the one who is staying.
+			   <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			   </p>
+			 </div>
+		  </li>
+			
+		  <li><input type="button" class="ui-header button" value="What is your name?" onclick="play25('name')">
+		    <audio id="name" src="audio/name.wav"></audio><div id="vocab">I-reum-i Mwo-ye-yo<br  /><br  />이름이 뭐예요?</div></li>
+			
+		  <li><input type="button" class="ui-header button" value="My name is~" onclick="play26('myname')">
+		    <audio id="myname" src="audio/myname.wav"></audio><div id="vocab">Je I-reum-eun ~im-ni-da<br  /><br  />제 이름은 ~입니다 <br>
+			<!--****************************************Specific Requirement I Popup 3**********************************************-->
+			<p><a href="#mynameis" id="audiocenter" data-rel="popup" data-transition="pop" 
+             class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			 </div>
+             <div data-role="popup" id="mynameis" class="ui-content" data-theme="a" style="max-width:350px;">
+               <p>Insert your name where the '~' symbol is. For example: Je I-reum-eun Courtney-im-ni-da.
+			   <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			   </p>
+			</div>
+		  </li>
+		  
+		  <li><input type="button" class="ui-header button" value="Thank you" onclick="play27('thank')">
+		    <audio id="thank" src="audio/thank.wav"></audio><div id="vocab">Kam-sa-ham-ni-da<br  /><br  />감사합니다</div></li>
+			
+		  <li><input type="button" class="ui-header button" value="I am sorry" onclick="play28('sorry')">
+		    <audio id="sorry" src="audio/sorry.wav"></audio><div id="vocab">Joe-song-ham-ni-da<br  /><br  />죄송합니다</div></li>
+		</ul>
+			
+	  </div>
+	  
+	  <!--*******************************Specific Requirement E & F Footer Navigation Bar************************************-->
+	  <div data-role="footer" data-id="footernav" data-theme="a">
+	    <div data-role="navbar">
+		  <ul>
+		    <!--*********************Specific Requirement D Transition #44**********************-->
+		    <li> <a href="index.html" data-transition="pop">Home</a></li>
+			<!--*********************Specific Requirement D Transition #45**********************-->
+			<li> <a href="about.html" data-transition="pop">About</a></li>
+			<!--*********************Specific Requirement D Transition #46**********************-->
+			<li> <a href="modules.html" data-transition="pop">Modules</a></li>
+			<!--*********************Specific Requirement D Transition #47**********************-->
+			<li> <a href="feedback.html" data-transition="pop">Feedback</a></li>
+			<!--*********************Specific Requirement D Transition #48**********************-->
+			<li> <a href="contact.html" data-transition="pop">Contact</a></li>
+		</div>
+	  </div>
+	</div>
+	    
+  </body>
+</html>

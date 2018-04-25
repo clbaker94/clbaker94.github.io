@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Courtney Baker
+ISLT-7375, Mobile Web App Development
+Final Project
+May 3, 2018
+-->
+  <head>
+    <title>Family</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/annyeong.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"
+  integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="audio.js"></script>
+	<link rel="stylesheet" type="text/css" href="annyeong.css">
+	<meta charset='utf-8'>
+  </head>
+  
+  <body>
+  <!--**************************Specific Requirement B Page Title 11 Family********************************-->
+    <div data-role="page" id="family" data-title="Family">
+	  <!--***********************************Specific Requirement I Panel Widget 4********************************-->
+	  <div data-role="panel" id="leftpanel">
+		  <ul data-role="listview" data-inset="true">
+		    <!--**********************************Specific Requirement D Transitions added for Menu Pages****************************-->
+		    <li><a href="greetings.html" data-transition="slide">Basic Greetings & Phrases</a></li>
+			<li><a href="numbers.html" data-transition="slide">Numbers</a></li>
+			<li><a href="colors.html" data-transition="slide">Colors</a></li>
+			<li><a href="family.html" id="activelink">Family</a></li>
+			<li><a href="food.html" data-transition="slide">Food & Restaurants</a></li>
+		  </ul>
+		  <p>
+		    <a data-role="button" data-rel="close">Close</a>
+		  </p>
+	  </div>
+		
+	  <!--*************************Specific Requirement E Header**********************-->
+	  <div data-role="header">
+	    <!--*********************Specific Requirement D Transition #63**********************-->
+	    <!--*************************Specific Requirement E & J Previous button with icon*********************************-->
+	    <a href="colors.html" data-icon="carat-l" data-iconpos="notext" data-transition="flip" data-direction="reverse"></a>
+		<!--*********************Specific Requirement D Transition #64**********************-->
+		<!--*************************Specific Requirement E & J Next button with icon****************************-->
+		<a href="food.html" data-icon="carat-r" data-transition="flip" data-iconpos="notext"></a>
+		<h1>Family</h1>
+	  </div>
+	  
+	  <div role="main" class="ui-content">
+	    <p>This module will focus on the names for immediate family members.</p>
+		
+		<a href="#leftpanel" data-role="button" data-icon="bars">Menu</a>
+		
+		<ul id="familyvocab" data-role="listview" data-inset="true">
+		        <li><input type="button" class="ui-header button" value="Mom" onclick="play42('mom')">
+		          <audio id="mom" src="audio/mom.wav"></audio><div id="vocab">Eom-ma<br  /><br  />엄마</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Dad" onclick="play43('dad')">
+		          <audio id="dad" src="audio/dad.wav"></audio><div id="vocab">A-ppa<br  /><br  />아빠</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Grandmother" onclick="play44('grandma')">
+		          <audio id="grandma" src="audio/grandma.wav"></audio><div id="vocab">Hal-meo-ni<br  /><br  />할머니</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Grandfather" onclick="play45('grandpa')">
+		          <audio id="grandpa" src="audio/grandpa.wav"></audio><div id="vocab">Ha-ra-beo-ji<br  /><br  />할아버지</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Younger brother" onclick="play46('youngerbrother')">
+		          <audio id="youngerbrother" src="audio/youngerbrother.wav"></audio><div id="vocab">Nam-dong-saeng<br  /><br  />남동생</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Younger sister" onclick="play47('youngersister')">
+		          <audio id="youngersister" src="audio/youngersister.wav"></audio><div id="vocab">Yeo-dong-saeng<br  /><br  />여동생</div></li>
+				  
+			    <li><input type="button" class="ui-header button" value="Older brother (1)" onclick="play48('olderbrother1')">
+		          <audio id="olderbrother1" src="audio/olderbrother1.wav"></audio><div id="vocab">Hyung<br  /><br  />형 <br>
+			      <!--****************************************Specific Requirement I Popup 4**********************************************-->
+			      <p><a href="#olderbrother" id="audiocenter" data-rel="popup" data-transition="pop" 
+                  class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			      </div>
+                  <div data-role="popup" id="olderbrother" class="ui-content" data-theme="a" style="max-width:350px;">
+                    <p>This is what a boy would call his older brother.
+			        <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			        </p>
+			     </div>
+		       </li>
+			   
+			   <li><input type="button" class="ui-header button" value="Older brother (2)" onclick="play49('olderbrother2')">
+		          <audio id="olderbrother2" src="audio/olderbrother2.wav"></audio><div id="vocab">O-ppa<br  /><br  />오빠<br>
+			      <!--****************************************Specific Requirement I Popup 5**********************************************-->
+			      <p><a href="#olderbro2" id="audiocenter" data-rel="popup" data-transition="pop" 
+                  class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			      </div>
+                  <div data-role="popup" id="olderbro2" class="ui-content" data-theme="a" style="max-width:350px;">
+                    <p>This is what a girl would call her older brother.
+			        <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			        </p>
+			     </div>
+		       </li>
+			   
+			   <li><input type="button" class="ui-header button" value="Older sister (1)" onclick="play50('oldersister1')">
+		          <audio id="oldersister1" src="audio/oldersister1.wav"></audio><div id="vocab">Nu-na<br  /><br  />누나 <br>
+			      <!--****************************************Specific Requirement I Popup 6**********************************************-->
+			      <p><a href="#oldersister" id="audiocenter" data-rel="popup" data-transition="pop" 
+                  class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			      </div>
+                  <div data-role="popup" id="oldersister" class="ui-content" data-theme="a" style="max-width:350px;">
+                    <p>This is what a boy would call his older sister.
+			        <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			        </p>
+			     </div>
+		       </li>
+			   
+			   <li><input type="button" class="ui-header button" value="Older sister (2)" onclick="play51('oldersister2')">
+		          <audio id="oldersister2" src="audio/oldersister2.wav"></audio><div id="vocab">Eon-ni<br  /><br  />언니 <br>
+			      <!--****************************************Specific Requirement I Popup 7**********************************************-->
+			      <p><a href="#oldersis2" id="audiocenter" data-rel="popup" data-transition="pop" 
+                  class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext"></a></p>
+			      </div>
+                  <div data-role="popup" id="oldersis2" class="ui-content" data-theme="a" style="max-width:350px;">
+                    <p>This is what a girl would call her older sister.
+			        <a href="" data-rel="back" data-theme="a" data-role="button">Close</a>
+			        </p>
+			     </div>
+		       </li>
+			   
+			   <li><input type="button" class="ui-header button" value="Husband" onclick="play52('husband')">
+		          <audio id="husband" src="audio/husband.wav"></audio><div id="vocab">Nam-pyeon<br  /><br  />남편</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Wife" onclick="play53('wife')">
+		          <audio id="wife" src="audio/wife.wav"></audio><div id="vocab">A-nae<br  /><br  />아내</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Daughter" onclick="play54('daughter')">
+		          <audio id="daughter" src="audio/daughter.wav"></audio><div id="vocab">Ddal<br  /><br  />딸</div></li>
+				  
+				<li><input type="button" class="ui-header button" value="Son" onclick="play55('son')">
+		          <audio id="son" src="audio/son.wav"></audio><div id="vocab">A-deul<br  /><br  />아들</div></li>
+		</ul>
+		
+	  </div>
+	  
+	  <!--*******************************Specific Requirement E & F Footer Navigation Bar************************************-->
+	  <div data-role="footer" data-id="footernav" data-theme="a">
+	    <div data-role="navbar">
+		  <ul>
+		    <!--*********************Specific Requirement D Transition #65**********************-->
+		    <li> <a href="index.html" data-transition="pop">Home</a></li>
+			<!--*********************Specific Requirement D Transition #66**********************-->
+			<li> <a href="about.html" data-transition="pop">About</a></li>
+			<!--*********************Specific Requirement D Transition #67**********************-->
+			<li> <a href="modules.html" data-transition="pop">Modules</a></li>
+			<!--*********************Specific Requirement D Transition #68**********************-->
+			<li> <a href="feedback.html" data-transition="pop">Feedback</a></li>
+			<!--*********************Specific Requirement D Transition #69**********************-->
+			<li> <a href="contact.html" data-transition="pop">Contact</a></li>
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>
